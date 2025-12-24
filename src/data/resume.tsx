@@ -88,7 +88,7 @@ export const DATA = {
       end: "2025",
     },
     {
-      school: "Vivekanand Memorial Public School",
+      school: "Vivekanand Memoria Public School",
       href: "https://vmpsschool.com",
       degree: "High School",
       logoUrl: "/vmps.jpeg",
