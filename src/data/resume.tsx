@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { url } from "inspector";
-import { HomeIcon,  FileText } from "lucide-react";
+import { HomeIcon,  FileText, icons } from "lucide-react";
 import { title } from "process";
 
 export const DATA = {
@@ -10,7 +10,7 @@ export const DATA = {
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/chennai",
   description:
-    "Aspiring Full-Stack Developer with a strong foundation in building dynamic, responsive applications. Enthusiastic. about exploring Web3 technologies and decentralized solutions",
+    "Full-Stack Developer, learning and building",
   summary:
     "Enthusiastic Computer Science student with strong DSA fundamentals and experience in developing user-focused scalable systems. Adaptable, curious, and collaborative with excellent communication and problem-solving skills.",
   avatarUrl: "/harsh.jpeg",
@@ -118,6 +118,11 @@ export const DATA = {
           href: "null",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/harsharora-code/Payn",
+          icon: <Icons.github className="size-3"/>,
+        }
       ],
       image: "/payn.png",
       video:
@@ -141,7 +146,7 @@ export const DATA = {
 
         {
           type: "Source",
-          href: "null",
+          href: "https://github.com/harsharora-code/second-Brain",
           icon: <Icons.github className="size-3" />,
         },
 
