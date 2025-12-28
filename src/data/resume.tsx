@@ -4,7 +4,7 @@ import { HomeIcon,  FileText, icons } from "lucide-react";
 import { title } from "process";
 
 export const DATA = {
-  name: "Harsh Arora",
+  name: "harsh Arora",
   initials: "HA",
   url: "",
   location: "Chennai, India",
