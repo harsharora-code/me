@@ -13,7 +13,7 @@ export const DATA = {
     "Full-Stack Developer, learning and building",
   summary:
     "Enthusiastic Computer Science student with strong DSA fundamentals and experience in developing user-focused scalable systems. Adaptable, curious, and collaborative with excellent communication and problem-solving skills.",
-  avatarUrl: "/harsh.jpeg",
+  avatarUrl: "/harsh-profile.jpeg",
   skills: [
     "React",
     "Next.js",
