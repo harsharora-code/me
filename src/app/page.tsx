@@ -145,8 +145,8 @@ export default function Page() {
   {/* <Separator> */}
 
   <BlurFade delay={BLUR_FADE_DELAY * 16}>
- <div className="mb-8 prose prose-neutral dark:prose-invert">
-  <h3>GitHub Contributions</h3>
+ <div className="mb-6 prose prose-neutral dark:prose-invert">
+  <h3 className="mt-4">GitHub Contributions</h3>
   <div className="overflow-x-hidden [&>div]:overflow-x-hidden [&_svg]:max-w-full">
     <GitHubCalendar
       username="harsharora-code"
