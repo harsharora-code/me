@@ -1,3 +1,4 @@
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -9,22 +10,10 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Markdown from "react-markdown";
-import GithubContributionsClient from "@/components/GithubContributionsClient";
+import { GitHubCalendar } from "react-github-calendar";
+import { Separator } from "@radix-ui/react-separator";
 
 const BLUR_FADE_DELAY = 0.04;
-
-// const GithubContributions = dynamic(
-//   () => import("@/components/GithubContribute"),
-//   {
-//     ssr: false,
-//     loading: () => (
-//       <div className="rounded-lg border p-6 text-center text-muted-foreground">
-//         Loading GitHub contributions…
-//       </div>
-//     ),
-//   }
-// );
-
 
 export default function Page() {
   return (
@@ -145,15 +134,30 @@ export default function Page() {
       <section id="github">
   <BlurFade delay={BLUR_FADE_DELAY * 15}>
      <div className="space-y-2">
+      <center>
      <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
          Proof of Work
      </div>
+     </center>
      </div>
   </BlurFade>
 
+  {/* <Separator> */}
+
   <BlurFade delay={BLUR_FADE_DELAY * 16}>
-   
-       <GithubContributionsClient />
+ <div className="mb-8 prose prose-neutral dark:prose-invert">
+  <h3>GitHub Contributions</h3>
+  <div className="overflow-x-hidden [&>div]:overflow-x-hidden [&_svg]:max-w-full">
+    <GitHubCalendar
+      username="harsharora-code"
+      // blockSize={10}
+      // blockMargin={4}
+    />
+  </div>
+</div>
+
+
+      {/* </Separator> */}
     
   </BlurFade>
 </section>
