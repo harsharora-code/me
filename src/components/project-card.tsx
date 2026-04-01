@@ -14,7 +14,7 @@ import Markdown from "react-markdown";
 interface Props {
   title: string;
   href?: string;
-  description: string;
+  description: string | readonly string[];
   dates: string;
   tags: readonly string[];
   link?: string;
@@ -39,6 +39,9 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const bulletDescription = Array.isArray(description) ? description : undefined;
+  const textDescription = typeof description === "string" ? description : undefined;
+
   return (
     <Card
       className={
@@ -76,9 +79,18 @@ export function ProjectCard({
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-            {description}
-          </Markdown>
+          {textDescription && (
+            <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+              {textDescription}
+            </Markdown>
+        //     {bulletDescription && (
+        //   <ul className="ml-5 list-disc space-y-2">
+        //     {bulletDescription.map((point, i) => (
+        //       <li key={i}>{point}</li>
+        //     ))}
+        //   </ul>
+        // )}
+          )}
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">

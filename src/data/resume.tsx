@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { url } from "inspector";
-import { HomeIcon,  FileText, icons } from "lucide-react";
+import { HomeIcon,  FileText, icons, Icon } from "lucide-react";
 import { title } from "process";
 
 export const DATA = {
@@ -98,12 +98,44 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Drawio",
+      href: "null",
+      dates: "Jan-2026",
+      active: true,
+      description: "Architected a real-time collaborative Whiteboard - allowing multiple users to sketch and draw together with live update.",
+      technologies: [
+        "Next.js",
+        "typescript",
+        "PostgreSQL",
+        "Prisma",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Docker"
+      ],
+      links: [
+        {
+          type: "Developing",
+          href: "null",
+          icon: <Icons.globe className="size-3"/>,
+
+        },
+        {
+          type: "Source",
+          href: "https://github.com/harsharora-code/draw",
+          icon: <Icons.github className="size-3" />,
+        }
+      ],
+      image: "/draw.jpeg",
+      video: "null"
+
+    },
+    {
       title: "Payn",
       href: "null",
       dates: "Sep-2025",
       active: true,
       description:
-        "",
+        "Developed a Paytm-like wallet app that allows to add-money and P2P Payments with secure user authentication",
       technologies: [
         "Next.js",
         "Typescript",
@@ -134,7 +166,7 @@ export const DATA = {
       dates: "Sep-2025",
       active: true,
       description:
-        "",
+        "Designed a Information center that allow users to organize and manage articles, documents, and media seamlessly.",
       technologies: [
         "React.js",
         "Typescript",
@@ -143,7 +175,6 @@ export const DATA = {
         "Shadcn UI",
       ],
       links: [
-
         {
           type: "Source",
           href: "https://github.com/harsharora-code/second-Brain",
@@ -171,9 +202,6 @@ export const DATA = {
         "Prisma",
         "TailwindCSS",
         "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
