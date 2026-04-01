@@ -1,4 +1,3 @@
-
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -33,6 +32,21 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+            <section id="availability">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <div className="rounded-lg border bg-card p-4 text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+              </span>
+              <p className="text-sm font-medium">
+                {DATA.availability.status} - {DATA.availability.text}
+              </p>
+            </div>
+          </div>
+        </BlurFade>
+      </section>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
