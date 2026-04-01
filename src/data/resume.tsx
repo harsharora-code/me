@@ -1,12 +1,14 @@
 import { Icons } from "@/components/icons";
+import { color } from "framer-motion";
 import { url } from "inspector";
 import { HomeIcon,  FileText, icons, Icon } from "lucide-react";
 import { title } from "process";
+import { text } from "stream/consumers";
 
 export const DATA = {
   name: "Harsh Arora",
   initials: "HA",
-  url: "",
+  url: "https://harsh-code.vercel.app/",
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/chennai",
   description:
@@ -14,6 +16,12 @@ export const DATA = {
   summary:
     "Enthusiastic Computer Science student with strong DSA fundamentals and experience in developing user-focused scalable systems. Adaptable, curious, and collaborative with excellent communication and problem-solving skills.",
   avatarUrl: "/harsh.jpg.jpeg",
+  availability: {
+       status: "Available",
+      text : "Open to new freelance projects and collaborations",
+      color: "green",
+      link: "mailto:harshpunyani20@gmail.com",
+      },
   skills: [
     "React",
     "Next.js",
