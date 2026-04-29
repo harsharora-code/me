@@ -37,7 +37,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://drive.google.com/file/d/1miwFfHjtShyAMmMz7cAccJBdvwZ2FY9A/view?usp=sharing", icon: FileText, label: "Resume" },
+    { href: "https://drive.google.com/file/d/19THG8OAOWBm-BSiJGxe02OnhByqmYuZi/view?usp=drivesdk", icon: FileText, label: "Resume" },
     
   ],
   contact: {
