@@ -27,18 +27,17 @@ export const DATA = {
     "Next.js",
     "Javascript",
     "Typescript",
-    "Node.js",
     "Bun.js",
+    "Node.js",
     "Express.js",
     "Postgres",
      "Prisma",
-     "Redis"
      "Docker",
      "Java",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://drive.google.com/file/d/19THG8OAOWBm-BSiJGxe02OnhByqmYuZi/view?usp=drivesdk", icon: FileText, label: "Resume" },
+    { href: "https://drive.google.com/file/d/16Z-ST-2BEZ4SDseJMPE1vxk4KVpVRg-G/view?usp=sharing", icon: FileText, label: "Resume" },
     
   ],
   contact: {
