@@ -23,7 +23,7 @@ export const DATA = {
       link: "mailto:harshpunyani24@gmail.com",
       },
   skills: [
-    "React.js",
+    "React",
     "Next.js",
     "Javascript",
     "Typescript",
