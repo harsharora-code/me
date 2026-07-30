@@ -32,7 +32,6 @@ export const DATA = {
     "Express.js",
     "Postgres",
      "Prisma",
-     "Redis",
      "Docker",
      "Java",
   ],
@@ -94,7 +93,7 @@ export const DATA = {
       degree: "Bachelor's Degree of Computer Science",
       logoUrl: "/srmist-logo.png",
       start: "2023",
-      end: "2025",
+      end: "2027",
     },
     {
       school: "Vivekanand Memorial Public School",
