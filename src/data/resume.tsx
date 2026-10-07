@@ -107,6 +107,43 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "NexCode",
+      href: "https://nexcode-run.vercel.app",
+      dates: "Sep-2026",
+      active: true,
+      description: [
+        "Real-time results - pushed the instant they're ready, instead of polling.",
+        "Safe execution - every submission runs in a locked-down sandbox.",
+        "Queue-based & horizontally scalable, stateless workers pull jobs and scale by workers.",
+      ],
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Prisma",
+        "Bun",
+        "WebSocket",
+        "AWS",
+        "Docker"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://nexcode-run.vercel.app",
+          icon: <Icons.globe className="size-3"/>,
+
+        },
+        {
+          type: "Source",
+          href: "https://github.com/harsharora-code/leetcode-work",
+          icon: <Icons.github className="size-3" />,
+        }
+      ],
+      image: "/nexcode-new.png",
+      video: "null"
+
+    },
+    {
       title: "Drawio",
       href: "null",
       dates: "Jan-2026",
