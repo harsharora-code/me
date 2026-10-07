@@ -83,13 +83,13 @@ export function ProjectCard({
             <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
               {textDescription}
             </Markdown>
-        //     {bulletDescription && (
-        //   <ul className="ml-5 list-disc space-y-2">
-        //     {bulletDescription.map((point, i) => (
-        //       <li key={i}>{point}</li>
-        //     ))}
-        //   </ul>
-        // )}
+          )}
+          {bulletDescription && (
+            <ul className="ml-5 list-disc space-y-2 font-sans text-xs text-muted-foreground">
+              {bulletDescription.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
           )}
         </div>
       </CardHeader>
