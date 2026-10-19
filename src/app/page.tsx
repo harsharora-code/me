@@ -14,6 +14,26 @@ import { Separator } from "@radix-ui/react-separator";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const SKILL_ICON_SLUGS: Record<string, string> = {
+  JavaScript: "javascript",
+  TypeScript: "typescript",
+  Java: "openjdk",
+  React: "react",
+  "Next.js": "nextdotjs",
+  "Node.js": "nodedotjs",
+  "Express.js": "express",
+  WebSockets: "socketdotio",
+  PostgreSQL: "postgresql",
+  MongoDB: "mongodb",
+  Prisma: "prisma",
+  Redis: "redis",
+  "Bun.js": "bun",
+  Docker: "docker",
+  AWS: "amazonaws",
+  Nginx: "nginx",
+  "CI/CD": "githubactions",
+};
+
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -49,8 +69,8 @@ export default function Page() {
       </section>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+              <Avatar className="size-36 shrink-0 border sm:size-40">
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover" />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -96,10 +116,35 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+          <div className="flex flex-col gap-5">
+            {DATA.skills.map((group, id) => (
+              <BlurFade
+                key={group.category}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+                className="grid gap-2 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-x-8"
+              >
+                <h3 className="text-sm font-semibold">{group.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="outline"
+                      className="gap-2 rounded-md border-transparent bg-white px-3 py-1 font-semibold text-black hover:bg-zinc-100"
+                    >
+                      <img
+                        src={
+                          skill === "AWS"
+                            ? "aws.jpg"
+                            : `https://cdn.simpleicons.org/${SKILL_ICON_SLUGS[skill]}/000000`
+                        }
+                        alt=""
+                        aria-hidden="true"
+                        className="size-4 shrink-0 object-contain"
+                      />
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </BlurFade>
             ))}
           </div>
@@ -147,7 +192,7 @@ export default function Page() {
       </section>
       <section id="github">
   <BlurFade delay={BLUR_FADE_DELAY * 15}>
-     <div className="space-y-2">
+     <div className="mb-4">
       <center>
      <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
          Proof of Work
@@ -159,16 +204,35 @@ export default function Page() {
   {/* <Separator> */}
 
   <BlurFade delay={BLUR_FADE_DELAY * 16}>
- <div className="mb-6 prose prose-neutral dark:prose-invert">
-  <h3 className="mt-4">GitHub Contributions</h3>
-  <div className="overflow-x-hidden [&>div]:overflow-x-hidden [&_svg]:max-w-full">
-    <GitHubCalendar
-      username="harsharora-code"
-      // blockSize={10}
-      // blockMargin={4}
-    />
-  </div>
-</div>
+    <div className="mb-6 rounded-lg border bg-[#0a0a0a] p-4 text-zinc-400">
+      <div className="mb-4 flex items-center justify-between gap-4 font-mono text-xs sm:text-sm">
+        <h3 className="m-0 font-normal text-zinc-300">contributions</h3>
+        <a
+          href="https://github.com/harsharora-code"
+          target="_blank"
+          rel="noreferrer"
+          className="text-zinc-500 transition-colors hover:text-zinc-300"
+        >
+          @harsharora-code
+        </a>
+      </div>
+      <div className="overflow-x-hidden [scrollbar-width:none] [&_*]:[scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&_*::-webkit-scrollbar]:hidden">
+        <GitHubCalendar
+          username="harsharora-code"
+          blockSize={9}
+          blockMargin={2}
+          blockRadius={2}
+          colorScheme="dark"
+          fontSize={12}
+          showWeekdayLabels={["mon", "wed", "fri"]}
+          showColorLegend={false}
+          theme={{
+            dark: ["#161b16", "#0e4429", "#006d32", "#26a641", "#39d353"],
+          }}
+          labels={{ totalCount: "{{count}} contributions in the last year" }}
+        />
+      </div>
+    </div>
 
 
       {/* </Separator> */}
