@@ -12,10 +12,10 @@ export const DATA = {
   location: "Chennai, India",
   locationLink: "https://www.google.com/maps/place/chennai",
   description:
-    "Full-Stack Developer, learning and building",
+    "learning and building",
   summary:
-    "Enthusiastic Computer Science student with strong DSA fundamentals and experience in developing user-focused scalable systems. Adaptable, curious, and collaborative with excellent communication and problem-solving skills.",
-  avatarUrl: "/harsh.jpg.jpeg",
+    "Contributor in Full Stack Development, Build Scalable APIs, distributed systems and real world projects.",
+  avatarUrl: "/harsh-new.jpeg",
   availability: {
        status: "Available",
       text : "Open to new freelance projects and collaborations",
@@ -23,17 +23,18 @@ export const DATA = {
       link: "mailto:harshpunyani24@gmail.com",
       },
   skills: [
-    "React",
-    "Next.js",
-    "Javascript",
-    "Typescript",
-    "Bun.js",
-    "Node.js",
-    "Express.js",
-    "Postgres",
-     "Prisma",
-     "Docker",
-     "Java",
+    {
+      category: "Languages",
+      items: ["JavaScript", "TypeScript", "Java"],
+    },
+    {
+      category: "Web Development",
+      items: ["React", "Next.js", "Express.js", "Bun.js", "Node.js", "WebSockets", "Prisma"],
+    },
+    {
+      category: "Databases & Cloud",
+      items: ["PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Nginx", "CI/CD"],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
